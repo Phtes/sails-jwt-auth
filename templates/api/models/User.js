@@ -5,7 +5,11 @@ var bcrypt = require('bcryptjs');
 *
 */
 function encryptPassword(user, next) {
-	
+	if(user.password){
+		bcrypt.hash(user.password, 10).then(function(res){
+			user.password = res;
+		});
+	}
 }
 
 
@@ -21,11 +25,24 @@ var User = {
 
 	attributes : {
 		username: { type: 'string', unique: true },
-		first-name: { type: 'string', unique: false},
-		last-name: { type: 'string', unique: false},
+		firstname: { type: 'string', unique: false},
+		lastname: { type: 'string', unique: false},
 		email: { type: 'email', unique: true},
-		jwt-token: { type: 'alphanumeric', unique: true}
+		password: {type : 'string', minLength: 6},
+		jwttoken: { type: 'json', unique: true}
+	},
+
+	/**
+	* Hash password before creating a new user
+	*/
+	beforeCreate: function(user, next) {
+		encryptPassword(user, next).done(function(){
+			next(null, user);
+		}, function(error){
+			return error.toString();
+		});
 	}
+
 };
 
 module.exports = User;

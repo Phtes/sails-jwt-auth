@@ -22,6 +22,7 @@
 	"license": "MIT",
 	"dependencies": {
     	"jsonwebtoken": ">=5.0.0",
+    	"bcryptjs": "*"
   	},
   	"devDependencies": {
     	"sails-generate": "*"

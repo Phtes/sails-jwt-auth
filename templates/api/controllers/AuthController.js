@@ -17,7 +17,7 @@ var AuthController = {
 	* Log user out of application
 	*/
 	logout: function(req, res) {
-		req.logout():
+		req.logout();
 
 		// mark auth for sails
 		res.session.authenticated = false;
