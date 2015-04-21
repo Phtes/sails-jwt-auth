@@ -1,0 +1,34 @@
+{
+	"name": "sails-jwt-auth",
+	"version": "0.0.1",
+	"description": "Generate a Java-Web Token authentication layer for your sails app",
+	"author": "Kasey Klein",
+	"main": "lib/index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Phtes/sails-jwt-auth.git"
+	},
+	"bugs": {
+		"email": "newbydoom158@gmail.com",
+		"url": "https://github.com/Phtes/sails-jwt-auth/issues"
+	},
+	"keywords": [
+		"auth",
+		"generator",
+		"sails",
+		"jwt",
+		"token"
+	],
+	"license": "MIT",
+	"dependencies": {
+    	"jsonwebtoken": ">=5.0.0",
+  	},
+  	"devDependencies": {
+    	"sails-generate": "*"
+  	},
+  	"sailsGenerator": {
+    	"type": "auth",
+    	"behavior": "overrides `sails generate auth`",
+    	"sailsVersion": "0.10.x"
+  	}
+}

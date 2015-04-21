@@ -1,0 +1,7 @@
+{
+	"SJWT.Error.Password.Invalid": "The password or username is invalid.",
+	"SJWT.Error.User.Exists": "This username is already in use.",
+	"SJWT.Error.Username.Missing": "Please supply the username.",
+	"SJWT.Error.Password.Missing": "Please supply a password.",
+	"SJWT.Error.Generic": "Oops! Something went wrong, please try again!""
+}
