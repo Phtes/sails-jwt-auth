@@ -10,6 +10,8 @@ var User = {
 
 	attributes : {
 		username: { type: 'string', unique: true },
+		first-name: { type: 'string', unique: false},
+		last-name: { type: 'string', unique: false},
 		email: { type: 'email', unique: true},
 		jwt-token: { type: 'alphanumeric', unique: true}
 	}
