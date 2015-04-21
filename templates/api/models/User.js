@@ -1,3 +1,14 @@
+var bcrypt = require('bcryptjs');
+
+/**
+* Hash the password
+*
+*/
+function encryptPassword(user, next) {
+	
+}
+
+
 var User = {
 	/**
 	* User.js
